@@ -1,0 +1,17 @@
+{% extends './template/base.njk' %}
+
+{% block custom_content %}
+    <h3>file upload</h3>
+
+    <div class="image-list" id="imageList">
+        {% for image in imageList %}
+            <div class="image-item">
+                <a href="{{ image.visitUrl }}" target="_blank">
+                    <img src="{{ image.visitUrl }}" alt="not found">
+                </a>
+                <button class="btn btn-danger delete-image btn-sm" data-id="{{ image._id }}">delete</button>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

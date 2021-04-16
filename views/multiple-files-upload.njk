@@ -1,0 +1,24 @@
+{% extends './template/base.njk' %}
+
+{% block custom_js %}
+    <script src="/script/normal-file-upload.js"></script>
+{% endblock %}
+{% block custom_content %}
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3>{{ title }}({{ path }})</h3> {{ descri }}
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="normalize.css/normalize.css">
+  <link rel="stylesheet" href="style/common.css">
+  <script src="axios/dist/axios.min.js"></script>
+  <script src="script/common.js"></script>
+  {% block custom_js %}{% endblock %}
+
+</head>
+
+<body class="container">
+
+<div class="nav">
+  <ul class="nav-list">
+    {% for item in renderViewsList %}
+      <li class="nav-item {% if item.title === title %}active{% endif %}">
+        <a href="{{ item.path }}">{{ item.title }}({{ item.path }})</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% block custom_content %}
+{% endblock %}
+</body>
+
+</html>

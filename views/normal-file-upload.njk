@@ -1,0 +1,33 @@
+{% extends './template/base.njk' %}
+
+{% block custom_js %}
+  <script src="/script/normal-file-upload.js"></script>
+{% endblock %}
+{% block custom_content %}
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3>{{ title }}({{ path }})</h3> {{ descri }}
+  </div>
+
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="avatar">avatar: <input class="form-control" type="file" id="avatar"></label>
+        </div>
+
+        <div class="form-group">
+          <button id="submitBtn" class="btn btn-primary">upload</button>
+        </div>
+
+        <div class="bg-success" id="uploadSuccess">{{ uploadSuccess }}</div>
+        <div class="bg-danger" id="uploadFail">{{ uploadFail }}</div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
