@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\static\script\normal-file-upload.js">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

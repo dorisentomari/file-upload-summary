@@ -36,10 +36,10 @@ h3 {
     color: #fff;
 }
 
-
 .image-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .image-list .image-item {
